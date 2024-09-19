@@ -1,0 +1,133 @@
+/* Basic Reset */
+body, h1, input, button, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scroll on body */
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-height: 80vh; /* Adjust as needed */
+    overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#search-container {
+    margin-bottom: 20px;
+}
+
+#search-query {
+    width: calc(100% - 120px);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-button, #back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover, #back-button:hover {
+    background-color: #0056b3;
+}
+
+#back-button {
+    display: none; /* Hidden by default */
+}
+
+.books-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.book-item img {
+    max-width: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.book-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.book-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.book-item a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.book-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #search-query {
+        width: calc(100% - 80px);
+    }
+
+    #search-button, #back-button {
+        width: 80px;
+        font-size: 14px;
+    }
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #007BFF;
+    margin-top: 20px;
+}
